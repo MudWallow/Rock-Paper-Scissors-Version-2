@@ -1,4 +1,4 @@
-let playerChoice = "RoCk";
+let playerChoice = "Paper";
 let computerChoice;
 const gameText = document.querySelector('.gameText');
 const playerInput = document.querySelector('#playerInput');
@@ -15,19 +15,22 @@ function compare() {
     playerChoice = playerChoice.toLowerCase();
     if (playerChoice === computerChoice) {
         gameText.textContent = ("You both chose " + playerChoice + "! It's a draw.")
-    } else if (playerChoice === "paper" && computerChoice.toLowerCase === "rock") {
+    } else if (playerChoice === "paper" && computerChoice === "rock") {
         gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You win!")
-    } else if (playerChoice === "Paper" && computerChoice === "Scissors") {
+    } else if (playerChoice === "paper" && computerChoice === "scissors") {
         gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You lose!")
-    } else if (playerChoice == "Scissors" && computerChoice === "Paper") {
+    } else if (playerChoice == "scissors" && computerChoice === "paper") {
         gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You win!")
-    } else if (playerChoice == "Scissors" && computerChoice === "Rock") {
+    } else if (playerChoice == "scissors" && computerChoice === "rock") {
         gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You lose!")
-    } else if (playerChoice === "Rock" && computerChoice === "Paper") {
+    } else if (playerChoice === "rock" && computerChoice === "paper") {
         gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You lose!")
-    } else if (playerChoice === "Rock" && computerChoice === "Scissors") {
+    } else if (playerChoice === "rock" && computerChoice === "scissors") {
         gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You win!")
     } else {
         gameText.textContent = (playerChoice);
     }
 }
+
+getComputerChoice();
+compare();
