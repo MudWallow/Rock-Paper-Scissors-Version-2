@@ -11,3 +11,23 @@ function getComputerChoice() {
     return computerChoice;
 }
 
+function compare() {
+    playerChoice = playerChoice.toLowerCase();
+    if (playerChoice === computerChoice) {
+        gameText.textContent = ("You both chose " + playerChoice + "! It's a draw.")
+    } else if (playerChoice === "paper" && computerChoice.toLowerCase === "rock") {
+        gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You win!")
+    } else if (playerChoice === "Paper" && computerChoice === "Scissors") {
+        gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You lose!")
+    } else if (playerChoice == "Scissors" && computerChoice === "Paper") {
+        gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You win!")
+    } else if (playerChoice == "Scissors" && computerChoice === "Rock") {
+        gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You lose!")
+    } else if (playerChoice === "Rock" && computerChoice === "Paper") {
+        gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You lose!")
+    } else if (playerChoice === "Rock" && computerChoice === "Scissors") {
+        gameText.textContent = ("You chose " + playerChoice + ", they chose " + computerChoice + "! You win!")
+    } else {
+        gameText.textContent = (playerChoice);
+    }
+}
